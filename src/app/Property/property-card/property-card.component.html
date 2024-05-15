@@ -1,0 +1,26 @@
+
+
+    <div  class="{{addProp == 0 ? 'card showProp' : 'addProp'}} mt-4">
+
+      <div class="img-wrapper">
+        <img src="assets/HousePic/{{(property.ImgUrl==undefined?'house1':property.ImgUrl)}}.png" class="card-img-top" alt="...">
+        <ul class="text-center icons-img animate">
+          @if (addProp == 0) {
+          <li class="btn btn-primary list-inline-item" routerLink="/property-detail/{{property.id}}"><i class="fa fa-edit" aria-hidden="true"></i></li>
+          <li class="btn btn-success list-inline-item"><i class="fa fa-address-book" aria-hidden="true"></i></li>
+        }
+        </ul>
+      </div>
+      <div class="card-body">
+
+        <h1 class="card-title text-primary">{{property.BHK}} {{property.BHK!= 0 ? 'BHK' : ''}} {{property.propertyType}}</h1>
+        <p class="card-text">{{property.Building.length > 0? 'In' : '' }} {{property.Building}}{{property.city.length > 0? ',' : '' }} {{property.city}}</p>
+        <h5 class="card-title"> {{property.furnish}} | {{property.moveNow == 1?'ready to move':'Not Ready To Move'}}</h5>
+        <hr/>
+        <p class="card-text" style="font-weight: bold;">price:{{property.Price}}$ | area:{{property.area}}<span style="color: red;">Sq Ft</span></p>
+
+      </div>
+
+        </div>
+
+

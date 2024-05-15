@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-5 mx-auto">
+
+<div class="card">
+  <div class="card-header">
+    <h3>Register</h3>
+  </div>
+  <div class="card-body">
+    <form #form = 'ngForm'>
+      <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input class="form-control"  #Name="ngModel" [(ngModel)]="user.Name" placeholder="Name" ngModel minlength="5" name="Name" required>
+        @if(Name.touched && !Name.valid&&Name.errors){
+          @if(Name.errors['minlength']){
+            <span class="error-span">Name must be greater than 5</span>
+          }
+          @if(Name.errors['required']){
+            <span class="error-span">please enter the name</span>
+          }
+        }
+      </div>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input class="form-control" placeholder="Email" ngModel name="Email" #Email="ngModel" [(ngModel)]="user.Email" required>
+      </div>
+      <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input class="form-control" type="password" placeholder="Password" [(ngModel)]="user.Password" #Password="ngModel" required ngModel name="Password">
+      </div>
+      <div class="mb-3">
+        <label for="Password" class="form-label">Confirm Password</label>
+        <input class="form-control" type="password" placeholder="Confirm Password" #CnfPassword="ngModel" required ngModel name="CnfPassword">
+        @if (CnfPassword.value != Password.value) {
+          <span class="error-span">Password is not correct</span>
+        }
+      </div>
+      <div class="mb-3">
+        <label for="Password" class="form-label">Mobile</label>
+        <input class="form-control" placeholder="Mobile" [(ngModel)]="user.Mobile" #Mobile="ngModel" required ngModel name="Mobile">
+      </div>
+      <button [disabled]="!form.valid" (click)="submitForm()" class="btn btn-primary m-3">Submit</button>
+      <button  (click)="cancel()" class="btn btn-secondary m-2">Cancel</button>
+    </form>
+  </div>
+
+</div>
+
+</div>
+</div>

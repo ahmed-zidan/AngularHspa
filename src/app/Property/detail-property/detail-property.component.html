@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <app-breif-detail [myProperty] = "this.property"></app-breif-detail>
+  </div>
+  <div class="col-md mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <mat-tab-group [selectedIndex]="selectedIdx"
+        (selectedIndexChange)="change($event)">
+
+        <mat-tab label="Overview" >
+          <app-overview-detatil [property] = "this.property"></app-overview-detatil>
+        </mat-tab>
+        <mat-tab label="Address">
+          <app-address-detail></app-address-detail>
+        </mat-tab>
+        <mat-tab label="Photos">
+          <app-photos-detail></app-photos-detail>
+        </mat-tab>
+        <mat-tab label="Contact">
+          <app-contact-detail></app-contact-detail>
+        </mat-tab>
+
+        </mat-tab-group>
+
+      </div>
+    </div>
+  </div>
+</div>

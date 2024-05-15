@@ -1,0 +1,24 @@
+<div class="mt-4">
+  <div>
+  <label for="societyProject">Price (in USD)</label>
+</div>
+<div>
+  <input class="form-control" type="number" required  #price="ngModel" [(ngModel)]="this.serv.property.Price">
+  @if(price.touched && price.errors){
+  @if(price.errors['required'] == true){
+    <span style="color: red;">
+      please enter the price
+    </span>
+  }}
+  <div>
+    <label for="area">Area (in Sq Ft)</label>
+  </div>
+  <input required class="form-control" type="number" #area="ngModel" [(ngModel)]="this.serv.property.area">
+  @if(area.touched && area.errors){
+    @if(area.errors['required'] == true){
+      <span style="color: red;">
+        please enter the area
+      </span>
+    }}
+</div>
+</div>

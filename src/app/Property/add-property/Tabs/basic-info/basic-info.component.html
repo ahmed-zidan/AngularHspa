@@ -1,0 +1,55 @@
+
+<div class="mt-4">I want to</div>
+<div class="btn-group mt-1">
+  <label class="btn btn-outline-primary" style="border-radius: 14px 0px 0px 14px;" [(ngModel)]="this.serv.property.SellRent"
+         btnRadio="asc" tabindex="0" role="button">Sell</label>
+  <label class="btn btn-outline-primary" style="margin-left: 7px;border-radius: 0px 14px 14px 1px;" [(ngModel)]="this.serv.property.SellRent"
+         btnRadio="desc" tabindex="0" role="button">Rent</label>
+</div>
+<div class="mt-4">BHK</div>
+<div class="btn-group mt-1">
+        <label class="btn btn-outline-primary" style="border-radius: 14px 0px 0px 14px;" [(ngModel)]="this.serv.property.BHK"
+         btnRadio="1" tabindex="0" role="button">1</label>
+        <label class="btn btn-outline-primary" style="margin-left: 7px;" [(ngModel)]="this.serv.property.BHK"
+         btnRadio="2" tabindex="0" role="button">2</label>
+         <label class="btn btn-outline-primary" style="margin-left: 7px;" [(ngModel)]="this.serv.property.BHK"
+         btnRadio="3" tabindex="0" role="button">3</label>
+         <label class="btn btn-outline-primary" style="margin-left: 7px;border-radius: 0px 14px 14px 1px;" [(ngModel)]="this.serv.property.BHK"
+         btnRadio="4" tabindex="0" role="button">4</label>
+</div>
+
+<div class="mt-4">Property Type</div>
+<div class="btn-group mt-1">
+  @for (item of serv.houses; track $index) {
+    <label class="btn btn-outline-primary"  [(ngModel)]="this.serv.property.propertyType"
+         btnRadio="{{item}}" tabindex="0" role="button">{{item}}</label>
+  }
+
+</div>
+<div class="mt-4">Furnish Type</div>
+<div class="btn-group mt-1">
+  @for (item of serv.furnishes; track $index) {
+    <label class="btn btn-outline-primary" [(ngModel)]="this.serv.property.furnish"
+         btnRadio="{{item}}" tabindex="0" role="button">{{item}}</label>
+  }
+
+</div>
+
+  <div class="mt-4">
+    <div>
+    <label for="societyProject">In Building</label>
+  </div>
+  <div>
+    <input class="form-control"  #Name="ngModel" [(ngModel)]="this.serv.property.Building">
+  </div>
+  </div>
+
+  <div class="mt-4">
+    <div>
+    <label for="city">City</label>
+  </div>
+  <div>
+    <input class="form-control"  #Name="ngModel" [(ngModel)]="serv.property.city">
+  </div>
+  </div>
+

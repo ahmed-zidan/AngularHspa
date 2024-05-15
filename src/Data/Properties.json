@@ -1,0 +1,75 @@
+[
+  {
+     "id":5,
+     "SellRent":1,
+     "Name":"House1",
+     "ImgUrl":"house1",
+     "Type":"House T",
+     "Price":12004,
+     "area":"30",
+     "Building":"Building1",
+     "moveNow":0,
+     "BHK":"3",
+     "propertyType":"House",
+     "city":"city1",
+     "furnish":"furnish"
+
+   },{
+     "id":1,
+     "SellRent":2,
+     "Name":"House2",
+     "ImgUrl":"house2",
+     "Type":"House Y",
+     "Price":16000,
+     "area":"30",
+     "Building":"Building1",
+     "moveNow":0,
+     "BHK":"3",
+     "propertyType":"House",
+     "city":"city1",
+     "furnish":"furnish"
+
+   },{
+     "id":2,
+     "SellRent":1,
+     "Name":"House3",
+     "ImgUrl":"house3",
+     "Type":"House M",
+     "Price":3000,
+     "area":"30",
+     "Building":"Building1",
+     "moveNow":0,
+     "BHK":"3",
+     "propertyType":"House",
+     "city":"city1",
+     "furnish":"furnish"
+   },{
+     "id":3,
+     "SellRent":2,
+     "Name":"House4",
+     "ImgUrl":"house4",
+     "Type":"House K",
+     "Price":50000,
+     "area":"30",
+     "Building":"Building1",
+     "moveNow":0,
+     "BHK":"3",
+     "propertyType":"House",
+     "city":"city1",
+     "furnish":"furnish"
+   },
+   {
+    "id":4,
+    "SellRent":2,
+    "Name":"House4",
+    "Type":"House K",
+    "Price":50000,
+    "area":"30",
+     "Building":"Building1",
+     "moveNow":0,
+     "BHK":"3",
+     "propertyType":"House",
+     "city":"city1",
+     "furnish":"furnish"
+  }
+ ]

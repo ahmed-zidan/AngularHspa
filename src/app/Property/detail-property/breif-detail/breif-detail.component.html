@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <img class="img-fluid" src="assets/HousePic/{{myProperty.ImgUrl}}.png">
+    <h1 class="mt-3 text-primary">{{myProperty.Name}}</h1>
+    <div style="font-weight: 600;">
+      <div>
+      <span>{{myProperty.BHK}} BHK {{myProperty.propertyType}} {{'@'}} ${{myProperty.Price}}</span>
+    </div>
+    <div>
+      <span>In {{myProperty.city}}</span>
+    </div>
+
+    </div>
+    <hr/>
+    <div>
+    <div>
+      <span style="font-weight: 600;">Build Area: </span>
+      <span>{{myProperty.area}} Sqft</span>
+
+    </div>
+    <div>
+      <span style="font-weight: 600;">Carpet Area: </span>
+      <span>{{myProperty.area}} Sqft</span>
+
+    </div>
+    <div>
+      <span style="font-weight: 600;">Furnishing Type: </span>
+      <span>{{myProperty.furnish}}</span>
+
+    </div>
+
+    </div>
+  </div>
+  <div class="card-footer input-group mt-5">
+    <button class="btn btn-primary w-50">Like</button>
+    <button class="btn btn-success w-50">Message</button>
+  </div>
+</div>

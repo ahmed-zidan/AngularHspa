@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+<div class="row mx-auto">
+  <div class="col-md-4 mx-auto">
+    <label style="font-weight: 600;">filter City :  </label>
+    <select class="btn btn-outline-primary"  #ddlFilterVal (change)="changeFlter(ddlFilterVal.value)">
+      <option value="all">all</option>
+      @for (item of  distictCities ; track $index) {
+        <option value="{{item}}">{{item}}</option>
+      }
+    </select>
+
+  </div>
+  <div class="col-md-4 mx-auto">
+    <label style="font-weight: 600;">sort By :  </label>
+    <select class="btn btn-outline-success" #ddlSortVal (change)="changeSort(ddlSortVal.value)">
+      <option value="all">None</option>
+      @for (item of  propertiesName ; track $index) {
+        <option value="{{item}}">{{item}}</option>
+      }
+    </select>
+    <div class="btn-group ms-2">
+      <label class="btn btn-outline-primary" style="border-radius: 14px 0px 0px 14px;" [(ngModel)]="this.ascOrDesc"
+             btnRadio="asc" tabindex="0" role="button">asc</label>
+      <label class="btn btn-outline-primary" style="margin-left: 7px;border-radius: 0px 14px 14px 1px;" [(ngModel)]="this.ascOrDesc"
+             btnRadio="desc" tabindex="0" role="button">desc</label>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+  @for (property of service.properties|filter:filterValue:'city'|sort:this.ascOrDesc:sortValue; track $index) {
+    <div class="col-md-3">
+  <app-property-card [property]="property"></app-property-card>
+    </div>
+}
+</div>

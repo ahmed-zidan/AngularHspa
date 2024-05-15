@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-header badge bg-primary">
+        <h4>List Your Property</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+
+            <mat-tab-group [selectedIndex]="selected"
+            (selectedIndexChange)="change($event)">
+
+            <mat-tab label="Basic Info" >
+              <app-basic-info [serv] = 'this.serv'></app-basic-info>
+            </mat-tab>
+            <mat-tab label="Pricing Area">
+              <app-pricing-area [serv] = 'this.serv'></app-pricing-area>
+            </mat-tab>
+            <mat-tab label="Address">
+              <app-address [serv] = 'this.serv'></app-address>
+            </mat-tab>
+            <mat-tab label="Other Details">
+              <app-other [serv] = 'this.serv'></app-other>
+            </mat-tab>
+            <mat-tab label="Photos">
+              <app-photo [serv] = 'this.serv'></app-photo>
+            </mat-tab>
+            </mat-tab-group>
+
+          </div>
+
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <button class="btn btn-primary w-100" (click)="NextTab()">Next</button>
+
+          </div>
+          @if(selected == 4){
+            <div class="col-12 mt-2">
+              <button class="btn btn-primary w-100" (click)="Submit()">Save</button>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+    <div class="card-header badge bg-primary">
+      <h4>Your Property Preview</h4>
+    </div>
+    <div class="card-body">
+      <app-property-card [property] ="this.serv.property" [addProp] ="1" ></app-property-card>
+      <!-- <app-property-view [serv]="this.serv"></app-property-view> -->
+    </div>
+  </div>
+  </div>
+</div>
+</div>

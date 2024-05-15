@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">HSPA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" aria-current="page" routerLink="/">Buy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/rent">Rent</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink = '/add-property' routerLinkActive="active"  >List Properties(Free)</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav d-flex">
+        @if(login()?.length){
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="    margin-right: 30px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              welecom {{login()}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">View Dashboard</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
+              <li><a class="dropdown-item" href="#">Change Password</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+
+        }
+        @else{
+          <li class="nav-item">
+            <a class="nav-link"  routerLink = '/Login' routerLinkActive="active">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink = '/Register' routerLinkActive="active">Register</a>
+          </li>
+        }
+
+      </ul>
+    </div>
+  </div>
+</nav>
